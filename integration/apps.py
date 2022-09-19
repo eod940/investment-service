@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class IntergrationConfig(AppConfig):
+class IntegrationConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'intergration'
+    name = 'integration'
