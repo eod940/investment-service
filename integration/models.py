@@ -30,7 +30,7 @@ class Account(models.Model):
     accounts_user = models.ForeignKey(
         "User",
         verbose_name="계좌 소유자",
-        on_delete=models.CASCADE()
+        on_delete=models.CASCADE
     )
 
     class Meta:
@@ -75,7 +75,7 @@ class Holdings(models.Model):
     holdings_stock = models.ForeignKey(
         "Stock",
         verbose_name="보유 종목",
-        on_delete=models.CASCADE()
+        on_delete=models.CASCADE
     )
     investment_principal = models.DecimalField(
         verbose_name="투자 원금",
@@ -85,7 +85,7 @@ class Holdings(models.Model):
     )
     user = models.ForeignKey(
         "User",
-        on_delete=models.CASCADE(),
+        on_delete=models.CASCADE,
         related_name="user"
     )
 
@@ -115,4 +115,4 @@ class Transfer(models.Model):
 
     class Meta:
         verbose_name = "주문"
-        ordering = [-'order_date', ]
+        ordering = ['-order_date', ]
