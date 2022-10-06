@@ -110,7 +110,6 @@ class Transfer(models.Model):
         decimal_places=2,
         default=0,
     )
-
     order_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:

@@ -1,9 +1,11 @@
 from rest_framework import serializers
 
-from integration.models import Transfer, Stock
+from integration.models import Transfer, Stock, Holdings
 
 
 class TransferSerializer(serializers.ModelSerializer):
+    transfer_id = serializers.IntegerField(source="id", write_only=True)
+
     class Meta:
         model = Transfer
         fields = (
@@ -21,3 +23,8 @@ class StockSerializer(serializers.ModelSerializer):
             "isin",
             "asset_group"
         )
+
+
+class HoldingsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Holdings
