@@ -7,9 +7,6 @@ from integration.models import Transfer
 from integration.serializers import TransferSerializer
 
 
-
-
-
 class TransferView(APIView):
     queryset = Transfer.objects.all()
     serializer_class = TransferSerializer
